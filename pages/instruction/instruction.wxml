@@ -1,0 +1,12 @@
+<!--pages/instruction/instruction.wxml-->
+<view class='instruction mt30'>　　1、计算器模块年化周期与收益率为必填项,续期方式为必选项,理财产品名称为选填项（若此项不填，默认为'理财产品+ID'）。</view>
+<view class='instruction mt30'>　　2、计算器模块收益计算周期为一年（365天）。</view>
+<view class='instruction mt30'>　　3、计算器模块净值续年化收益率计算方式如下（以10000元七日年化收益率5%为例）：365/7=52(1);年化收益率 = (1+0.05/365*7)^52*(1+0.05/365*1)-1 = 0.051246；万份每日收益 = 10000*年化收益率/365。</view>
+<view class='instruction mt30'>　　4、计算器模块本金续年化收益率计算方式如下（以10000元七日年化收益率5%为例）：年化收益率 = 5%；万份每日收益 = 10000*年化收益率/365。</view>
+<view class='instruction mt30'>　　5、排行榜模块为历史计算理财产品排行榜，可以通过编辑进行单项删除。</view>
+<view class='instruction mt30'>　　注意：数据存储位置为本小程序缓存，清除小程序缓存排行榜记录将清除且不可恢复。</view>
+<view class='tabbar'>
+  <view bindtap='toIndex' style='border-top: 1rpx solid #999;'>计算器</view>
+  <view class='ranking' bindtap='toranking' style='border-top: 1rpx solid #999;'>排行榜</view>
+  <view style='background-color:rgb(1,144,210);color:white'>说 明</view>
+</view>

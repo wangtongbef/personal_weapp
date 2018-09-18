@@ -1,0 +1,27 @@
+<!--pages/ranking/ranking.wxml-->
+<view class='content'>
+  <block wx:for='{{productArr}}' wx:for-index="idx" wx:key="text">
+    <view class='Item'>
+      <view class='w80'>{{idx+1}}</view>
+      <view class='w320'>{{item.name}}</view>
+      <view class='w160'>{{item.totalPersent}}</view>
+      <view class='w100' wx:if='{{showDel}}'>
+        <view class='del' data-Index='{{idx}}' bindtap='del'>删除</view>
+      </view>
+    </view>
+  </block>
+</view>
+<view class='top'>
+  <view class='write' bindtap='edit'>{{showDel?'完成':'编辑'}}</view>
+  <view class='title'>
+    <view class='w80'>排名</view>
+    <view class='w320'>名称</view>
+    <view class='w160'>年化收益</view>
+    <view class='w100' wx:if='{{showDel}}'></view>
+  </view>
+</view>
+<view class='tabbar'>
+  <view bindtap='toIndex' style='border-top: 1rpx solid #999;'>计算器</view>
+  <view class='ranking' style='background-color:rgb(1,144,210);color:white'>排行榜</view>
+  <view bindtap='toinstruction' style='border-top: 1rpx solid #999;'>说 明</view>
+</view>

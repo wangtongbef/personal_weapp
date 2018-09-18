@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='li'><view class='title'>理财产品名称：</view><input class='Input' type='text' bindinput='getname' placeholder='默认' value='{{namebef}}'></input><view class='operator'></view></view>
+  <view class='li'><view class='title'>年化周期：</view><input class='Input' type='number' bindinput='getCycle' value='{{cycle}}'></input><view class='operator'>日</view></view>
+  <view class='li'><view class='title'>收益率：</view><input class='Input' type='number' bindinput='getPeresent' value='{{percent}}'></input><view class='operator'>%</view></view>
+  <view class='li'>
+    <view class='title'>续期方式：</view>
+    <view class='checkType'>
+      <view class='typeO {{typeChecked==1?"checked":"unchecked"}}' data-Type='{{1}}' bindtap='typeCheck'>净值续</view>
+      <view class='typeT {{typeChecked==2?"checked":"unchecked"}}' data-Type='{{2}}' bindtap='typeCheck'>本金续</view>
+    </view>
+    <view class='operator'></view>
+  </view>
+  <view class='confirm' bindtap='confirm'>计算</view>
+  <view class='liResult'><view class='title'>年化收益率：</view><view class='earming'>{{totalPersent}}</view><view class='operator'>%</view></view>
+  <view class='liResult'><view class='title'>万份每日收益：</view><view class='earming'>{{singleearm}}</view><view class='operator'>元</view></view>
+  <view class='tabbar'>
+    <view style='background-color:rgb(1,144,210);color:white'>计算器</view>
+    <view class='ranking' bindtap='toranking' style='border-top: 1rpx solid #999;'>排行榜</view>
+    <view bindtap='toinstruction' style='border-top: 1rpx solid #999;'>说 明</view>
+  </view>
+</view>

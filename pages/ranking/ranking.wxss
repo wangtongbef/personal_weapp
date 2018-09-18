@@ -1,0 +1,91 @@
+/* pages/ranking/ranking.wxss */
+.top{
+  height:140rpx;
+  width:650rpx;
+  position: fixed;
+  left: 50rpx;
+  top:0;
+  background-color: #fff
+}
+.write{
+  width:100rpx;
+  height:50rpx;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color:#fff;
+  border-radius: 8rpx;
+  background:#278bc9;
+  position: absolute;
+  right: 0;
+  top:10rpx;
+}
+.title{
+  height: 80rpx;
+  width:650rpx;
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 80rpx;
+  display: flex;
+  border-bottom: 2rpx solid #eee;
+  position: absolute;
+  top:50rpx;
+  justify-content: space-around
+}
+.title view{
+  height:80rpx;
+  color: #3299da;
+}
+.w80{
+  width:80rpx;
+}
+.w320{
+  width:320rpx;
+}
+.w160{
+  width:160rpx;
+}
+.w100{
+  width:100rpx;
+}
+.content{
+  width:650rpx;
+  margin: 150rpx 0 100rpx;
+  position: relative;
+  left: 50rpx;
+}
+.Item{
+  width:650rpx;
+  height: 68rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 68rpx;
+  display: flex;
+  justify-content: space-around
+}
+.del{
+  width:100rpx;
+  height:50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  background-color: #63b7eb;
+  margin-top: 10rpx;
+  border-radius: 6rpx;
+  color: #fff;
+}
+.tabbar{
+  width:100%;
+  height:100rpx;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+}
+.tabbar view{
+  width:calc(100% / 3) ;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 32rpx;
+}
