@@ -68,11 +68,19 @@
   height:60rpx;
   line-height: 60rpx;
   text-align: center;
-  background:#278bc9;
-  color:#fff;
   border-radius: 8rpx;
   font-size: 28rpx;
   margin: 20rpx 0
+}
+.toSubmit{
+  background:#278bc9;
+  color:#fff;
+}
+.noSubmit{
+  background:#fff;
+  color:#000;
+  box-sizing: border-box;
+  border:1rpx solid #999;
 }
 .tabbar{
   width:100%;

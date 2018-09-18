@@ -6,7 +6,8 @@ Page({
    */
   data: {
     productArr:[],
-    showDel:false
+    showDel:false,
+    canDel:true
   },
 
   /**
@@ -14,9 +15,11 @@ Page({
    */
   onLoad: function (options) {
     var that = this
-    that.setData({
-      productArr: wx.getStorageSync('productArr')
-    })
+    if (wx.getStorageSync('productArr')){
+      that.setData({
+        productArr: wx.getStorageSync('productArr')
+      })
+    }
   },
   edit: function () {
     var that = this
@@ -26,14 +29,25 @@ Page({
   },
   del: function (e){
     var that = this
-    console.log(e.currentTarget.dataset.index)
-    var productArr = wx.getStorageSync('productArr'),
-      Index = e.currentTarget.dataset.index
-    productArr.splice(Index,1)
-    that.setData({
-      productArr: productArr
-    })
-    wx.setStorageSync('productArr', productArr)
+    if (that.data.canDel){
+      wx.showToast({
+        icon: 'loading',
+        duration: 100
+      })
+      that.setData({
+        canDel: false
+      })
+      setTimeout(function () {
+        var productArr = wx.getStorageSync('productArr'),
+          Index = e.currentTarget.dataset.index
+        productArr.splice(Index,1)
+        that.setData({
+          productArr: productArr,
+          canDel: true
+        })
+        wx.setStorageSync('productArr', productArr)
+      },100)
+    }
   },
   toIndex: function () {
     wx.redirectTo({
@@ -44,53 +58,5 @@ Page({
     wx.redirectTo({
       url: '../instruction/instruction'
     })
-  },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   }
 })

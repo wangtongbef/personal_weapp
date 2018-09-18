@@ -1,6 +1,6 @@
 <!--pages/ranking/ranking.wxml-->
 <view class='content'>
-  <block wx:for='{{productArr}}' wx:for-index="idx" wx:key="text">
+  <block wx:if='{{productArr.length!=0}}' wx:for='{{productArr}}' wx:for-index="idx" wx:key="text">
     <view class='Item'>
       <view class='w80'>{{idx+1}}</view>
       <view class='w320'>{{item.name}}</view>
@@ -10,6 +10,7 @@
       </view>
     </view>
   </block>
+  <view class='nodata' wx:if='{{productArr.length==0}}'>暂无数据</view>
 </view>
 <view class='top'>
   <view class='write' bindtap='edit'>{{showDel?'完成':'编辑'}}</view>

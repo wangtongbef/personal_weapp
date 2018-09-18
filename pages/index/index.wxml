@@ -11,7 +11,7 @@
     </view>
     <view class='operator'></view>
   </view>
-  <view class='confirm' bindtap='confirm'>计算</view>
+  <view class='confirm {{((firstSubmit&&persentSubmit&&cycleSubmit)||(!firstSubmit&&submit))?"toSubmit":"noSubmit"}}' bindtap='confirm'>计算收益</view>
   <view class='liResult'><view class='title'>年化收益率：</view><view class='earming'>{{totalPersent}}</view><view class='operator'>%</view></view>
   <view class='liResult'><view class='title'>万份每日收益：</view><view class='earming'>{{singleearm}}</view><view class='operator'>元</view></view>
   <view class='tabbar'>

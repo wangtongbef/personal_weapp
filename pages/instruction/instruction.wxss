@@ -3,11 +3,11 @@
   width:650rpx;
   position: relative;
   left: 50rpx;
-  font-size: 32rpx;
+  font-size: 28rpx;
   line-height: 40rpx;
 }
-.mt30{
-  margin-top: 30rpx;
+.mt28{
+  margin-top: 28rpx;
 }
 .tabbar{
   width:100%;

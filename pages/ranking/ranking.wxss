@@ -55,6 +55,15 @@
   position: relative;
   left: 50rpx;
 }
+.nodata{
+  margin-top: 420rpx;
+  height:30rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 30rpx;
+  font-size: 28rpx;
+  color: rgb(167, 167, 167)
+}
 .Item{
   width:650rpx;
   height: 68rpx;
