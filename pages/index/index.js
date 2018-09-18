@@ -1,30 +1,29 @@
-
 Page({
   data: {
-    name:'', //理财产品名称
-    namebef:'',
+    name: '', //理财产品名称
+    namebef: '',
     cycle: 0, //年化周期
     percent: 0, //收益率
     totalPersent: 0, //年化收益率
     singleearm: 0, //万份每日收益
     typeChecked: 1,
     productArr: [],
-    submit :false,
-    firstSubmit:true,
-    cycleSubmit:false,
+    submit: false,
+    firstSubmit: true, //首次进入判定
+    cycleSubmit: false,
     persentSubmit: false
   },
   onLoad: function () {
     var that = this
     var productArr
-    if (wx.getStorageSync('productArr')){
+    if (wx.getStorageSync('productArr')) {
       productArr = wx.getStorageSync('productArr')
       that.setData({
         productArr: productArr
       })
     }
   },
-  getname: function(e){
+  getname: function (e) {
     var that = this
     that.setData({
       name: e.detail.value,
@@ -48,7 +47,7 @@ Page({
       persentSubmit: true
     })
   },
-  typeCheck: function(e){ //续期方式选择
+  typeCheck: function (e) { //续期方式选择
     var that = this
     that.setData({
       typeChecked: e.currentTarget.dataset.type,
@@ -57,13 +56,13 @@ Page({
   },
   confirm: function () {
     var that = this
-    if(that.data.submit){
-      if (that.data.cycle !== 0 && that.data.percent !== 0){
+    if (that.data.submit) {
+      if (that.data.cycle !== 0 && that.data.percent !== 0) {
         wx.showToast({
           icon: 'loading',
           duration: 100
         })
-        setTimeout(function(){
+        setTimeout(function () { //计算并将其添加到storage中
           var id,
             productArr = that.data.productArr
           if (wx.getStorageSync('id')) {
@@ -83,7 +82,7 @@ Page({
               })
             }
           }
-          if (that.data.typeChecked == 1) {
+          if (that.data.typeChecked == 1) { //净值续计算
             var n = Math.floor(365 / that.data.cycle),
               m = 365 % that.data.cycle,
               oneCycle = that.data.percent * that.data.cycle / 36500, //单周期收益率
@@ -94,8 +93,8 @@ Page({
               singleearm: (10000 * (total - 1) / 365).toFixed(4)
             })
             10000 * (total - 1) / 365
-            //console.log(m, n, oneCycle, totalcycle, total)
-          } else if (that.data.typeChecked == 2) {
+
+          } else if (that.data.typeChecked == 2) { //本金续计算
             var _singleearm
             _singleearm = 10000 * that.data.percent / 36500 //万份每日收益
             that.setData({
@@ -103,7 +102,7 @@ Page({
               singleearm: _singleearm.toFixed(4)
             })
           }
-          var productObj = {
+          var productObj = { //排行榜单条数据
             id: id,
             name: that.data.name,
             totalPersent: that.data.totalPersent
@@ -130,8 +129,8 @@ Page({
             name: '',
             firstSubmit: false
           })
-        },100)
-      }else{
+        }, 100)
+      } else {
         wx.showToast({
           title: '参数不能为空',
           icon: 'none',
@@ -146,12 +145,12 @@ Page({
       })
     }
   },
-  toranking: function(){
+  toranking: function () {
     wx.redirectTo({
       url: '../ranking/ranking'
     })
   },
-  toinstruction: function(){
+  toinstruction: function () {
     wx.redirectTo({
       url: '../instruction/instruction'
     })
