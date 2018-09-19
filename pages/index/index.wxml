@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='li'><view class='title'>理财产品名称：</view><input class='Input' type='text' bindinput='getname' placeholder='默认' value='{{namebef}}'></input><view class='operator'></view></view>
+  <view class='li'><view class='title'>理财产品名称：</view><input class='Input' type='text' bindinput='getname' maxlength='10' placeholder='默认' value='{{namebef}}'></input><view class='operator'></view></view>
   <view class='li'><view class='title'>年化周期：</view><input class='Input' type='number' bindinput='getCycle' placeholder='0'></input><view class='operator'>日</view></view>
   <view class='li'><view class='title'>收益率：</view><input class='Input' type='number' bindinput='getPeresent' placeholder='0'></input><view class='operator'>%</view></view>
   <view class='li'>

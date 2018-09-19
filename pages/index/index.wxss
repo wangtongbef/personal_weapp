@@ -1,49 +1,51 @@
 .li,
 .liResult{
-  width: 600rpx;
-  height:70rpx;
+  width: 650rpx;
+  height:80rpx;
   display: flex;
   justify-content:space-between;
 }
 .title,
 .operator{
-  height:40rpx;
+  height:60rpx;
   line-height: 60rpx;
   text-align: right;
   color: #333;
-  font-size: 28rpx;
+  font-size: 32rpx;
 }
 .Input,
 .earming{
-  width:300rpx;
-  height:40rpx;
-  font-size: 28rpx;
+  width:330rpx;
+  font-size: 32rpx;
   color:#222;
   text-align: right;
   padding-right: 10rpx;
 }
 .Input{
+  height:56rpx;
   border:1rpx solid #999;
   border-radius: 8rpx;
 }
 .earming{
-  margin-top: 12rpx;
+  height:60rpx;
+  margin-top: 9rpx;
 }
 .checkType{
-  width:310rpx;
+  width:340rpx;
   height:40rpx;
   display: flex;
   justify-content: space-between;
 }
 .typeO,
 .typeT{
-  width:145rpx;
+  width:160rpx;
   height:60rpx;
   background-color: gray;
   border-radius: 8rpx;
-  font-size: 28rpx;
+  font-size: 30rpx;
   text-align: center;
-  line-height: 60rpx
+  line-height: 60rpx;
+  box-sizing: border-box
 }
 .checked{
   background-color: #3299da;
@@ -57,7 +59,7 @@
   box-sizing: border-box
 }
 .title{
-  width:200rpx;
+  width:230rpx;
 }
 .operator{
   width:40rpx;
@@ -65,12 +67,13 @@
 }
 .confirm{
   width:620rpx;
-  height:60rpx;
-  line-height: 60rpx;
+  height:65rpx;
+  line-height: 65rpx;
   text-align: center;
   border-radius: 8rpx;
-  font-size: 28rpx;
-  margin: 20rpx 0
+  font-size: 32rpx;
+  margin: 20rpx 0;
+  box-sizing: border-box
 }
 .toSubmit{
   background:#278bc9;
@@ -95,7 +98,7 @@
   box-sizing: border-box;
   text-align: center;
   line-height: 100rpx;
-  font-size: 32rpx;
+  font-size: 34rpx;
 }
 .ranking{
   border-right: 1rpx solid #999;

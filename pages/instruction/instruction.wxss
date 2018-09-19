@@ -3,8 +3,8 @@
   width:650rpx;
   position: relative;
   left: 50rpx;
-  font-size: 28rpx;
-  line-height: 40rpx;
+  font-size: 32rpx;
+  line-height: 44rpx;
 }
 .mt28{
   margin-top: 28rpx;
@@ -22,7 +22,7 @@
   box-sizing: border-box;
   text-align: center;
   line-height: 100rpx;
-  font-size: 32rpx;
+  font-size: 34rpx;
 }
 .ranking{
   border-left: 1rpx solid #999;

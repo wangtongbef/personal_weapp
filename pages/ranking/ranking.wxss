@@ -1,6 +1,6 @@
 /* pages/ranking/ranking.wxss */
 .top{
-  height:140rpx;
+  height:145rpx;
   width:650rpx;
   position: fixed;
   left: 50rpx;
@@ -9,9 +9,9 @@
 }
 .write{
   width:100rpx;
-  height:50rpx;
-  font-size: 28rpx;
-  line-height: 50rpx;
+  height:55rpx;
+  font-size: 32rpx;
+  line-height: 55rpx;
   text-align: center;
   color:#fff;
   border-radius: 8rpx;
@@ -24,7 +24,7 @@
   height: 80rpx;
   width:650rpx;
   margin-top: 10rpx;
-  font-size: 32rpx;
+  font-size: 34rpx;
   text-align: center;
   line-height: 80rpx;
   display: flex;
@@ -57,17 +57,17 @@
 }
 .nodata{
   margin-top: 420rpx;
-  height:30rpx;
+  height:40rpx;
   width: 100%;
   text-align: center;
-  line-height: 30rpx;
-  font-size: 28rpx;
+  line-height: 40rpx;
+  font-size: 32rpx;
   color: rgb(167, 167, 167)
 }
 .Item{
   width:650rpx;
   height: 68rpx;
-  font-size: 28rpx;
+  font-size: 32rpx;
   text-align: center;
   line-height: 68rpx;
   display: flex;
@@ -96,5 +96,5 @@
   box-sizing: border-box;
   text-align: center;
   line-height: 100rpx;
-  font-size: 32rpx;
+  font-size: 34rpx;
 }
